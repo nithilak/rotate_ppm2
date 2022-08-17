@@ -24,6 +24,7 @@ class PNG {
   // void FlipHorizontally(); //actually FlipLeftDiagonal at first
   void FlipAcrossAxisX(); // FlipHorizontally renamed to make it clearer
   void FlipAcrossAxisY(); //more clear
+  void FlipRightDiagonal(); //just because, to complete the set
 
   private:
   std::vector<std::vector<Color>> image_;
