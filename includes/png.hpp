@@ -19,7 +19,7 @@ class PNG {
   const Color& DatumAt(size_t row, size_t col);
   void SetDatumAt(size_t row, size_t col, const Color& color);
   void Swap(size_t& one, size_t& two);
-  // void RotateClockwise() was intended, but turned to FlipHorizontally()
+  // void RotateClockwise() was intended, but FlipHorizontally()
   void FlipHorizontally();
 
   private:
