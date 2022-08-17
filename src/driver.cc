@@ -15,9 +15,9 @@ int main() {
     png.FlipAcrossAxisX();
     png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_2.ppm");
 
-    png.RotateClockwise();
-    png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_3.ppm");
+    // png.RotateClockwise();
+    // png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_3.ppm");
 
-    png.FlipAcrossAxisY();
-    png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_4.ppm");
+    // png.FlipAcrossAxisY();
+    // png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_4.ppm");
 }
