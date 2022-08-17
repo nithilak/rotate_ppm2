@@ -26,5 +26,4 @@ int main() {
 
     png.FlipRightDiagonal();
     png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_5.ppm");
-    
 }
