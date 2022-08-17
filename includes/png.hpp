@@ -12,12 +12,15 @@ class PNG {
   public:
   PNG(const std::string& filename, size_t width, size_t height);
   void RotateCounterClockwise();
+  void RotateClockwise();
   void ToPpm(const std::string& filename);
   void FormatCheckPpmNotConst(std::ifstream& ifs);
   Color& GetDatumAt(std::vector<std::vector<Color>> image, size_t row, size_t col);
   const Color& DatumAt(size_t row, size_t col);
   void SetDatumAt(size_t row, size_t col, const Color& color);
   void Swap(size_t& one, size_t& two);
+  // void RotateClockwise() was intended, but turned to FlipHorizontally()
+  void FlipHorizontally();
 
   private:
   std::vector<std::vector<Color>> image_;
