@@ -166,6 +166,7 @@ void PNG::FlipAcrossAxisX() {
     //   std::vector<Color> line(height_, color);
       int current_width = static_cast<int>(width_) - 1;
       int current_row = static_cast<int>(height_) - 1 - row;
+      
       for (size_t col = 0; current_width >= 0 && current_row >= 0; col++) {
         if (current_width < 0) {
           throw std::runtime_error("current_width is less than 0");
