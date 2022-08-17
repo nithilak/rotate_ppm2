@@ -153,6 +153,48 @@ void PNG::FlipHorizontally() {
     }
 }
 
+void PNG::RotateClockwise() {
+    std::vector<std::vector<Color>> image = image_;
+    std::vector<std::vector<Color>> output(width_, std::vector<Color>(height_, Color{255, 0, 0}));
+    image_ = output;
+    Swap(height_, width_);
+    std::cout << "width_: " << width_ << " height_: " << height_ <<std::endl;
+    //translate each row to become a new col
+    //reads the elements in order
+    for (size_t row = 0; row < width_; row++) {
+      Color color{0, 0, 0};
+    //   std::vector<Color> line(height_, color);
+      int current_width = 0;
+      int current_row = static_cast<int>(width_) - 1 - row;
+      for (size_t col = 0; current_width < static_cast<int>(height_) && current_row >= 0; col++) {
+        if (current_width < 0) {
+          throw std::runtime_error("current_width is less than 0");
+        }
+        if (current_width > static_cast<int>(height_)) {
+          throw std::runtime_error("current_width is greater than \"static_cast<int>(height_)\"");
+        }
+        if (current_row < 0) {
+          throw std::runtime_error("current_row is less than 0");
+        }
+        //put element in new row, starting from the bottom
+        // Color color{0, 0, 0};
+        // line.insert(line.begin(), color);
+        // line.push_back(color);
+        //could use a try block here instead of having expensive checks all of the time
+        // try {
+        std::cout << current_width << " " << current_row << " " << row << " " << col << std::endl;
+        SetDatumAt(current_width, current_row, GetDatumAt(image, row, col));
+        // GetDatumAt(output, (current_width), row) = DatumAt(row, col);
+
+        // } catch (std::exception& e) {
+        //   std::cout << "set" << std::endl;
+        //   throw e;
+        // }
+        current_width++;
+      }
+    }
+}
+
 const Color& PNG::DatumAt(size_t row, size_t col) {
     if (row < 0 || row >= height_) {
       throw std::runtime_error("row is out of bounds: " + std::to_string(row));
