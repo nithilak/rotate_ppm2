@@ -20,7 +20,10 @@ class PNG {
   void SetDatumAt(size_t row, size_t col, const Color& color);
   void Swap(size_t& one, size_t& two);
   // void RotateClockwise() was intended, but FlipHorizontally()
-  void FlipHorizontally();
+  void FlipLeftDiagonal(); //old FlipHorizontally moved to here
+  // void FlipHorizontally(); //actually FlipLeftDiagonal at first
+  void FlipAcrossAxisX(); // FlipHorizontally renamed to make it clearer
+  void FlipAcrossAxisY(); //more clear
 
   private:
   std::vector<std::vector<Color>> image_;
