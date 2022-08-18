@@ -1,5 +1,6 @@
 #include <iostream>
 
+// #include "driver.hpp" //this is not necessary... at all
 #include "png.hpp"
 #include "color.hpp"
 
@@ -12,18 +13,18 @@ int main() {
     //careful, this rewrites the file every time
     png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output.ppm");
     
-    png.FlipAcrossAxisX();
-    png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_2.ppm");
+    // png.FlipAcrossAxisX();
+    // png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_2.ppm");
 
-    png.RotateClockwise();
-    png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_3.ppm");
+    // png.RotateClockwise();
+    // png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_3.ppm");
 
-    png.FlipAcrossAxisY();
-    png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_4.ppm");
+    // png.FlipAcrossAxisY();
+    // png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_4.ppm");
 
     png.FlipLeftDiagonal();
     png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_5.ppm");
 
     png.FlipRightDiagonal();
-    png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_5.ppm");
+    png.ToPpm("/Users/nithilak/png-test2/examples_output/test_output_6.ppm");
 }

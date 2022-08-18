@@ -141,7 +141,7 @@ void PNG::FlipLeftDiagonal() {
         //could use a try block here instead of having expensive checks all of the time
         // try {
         std::cout << current_width << " " << current_row << " " << row << " " << col << std::endl;
-        SetDatumAt(current_width, current_row, GetDatumAt(image, row, col));
+        SetDatumAt(current_width, row, GetDatumAt(image, row, col));
         // GetDatumAt(output, (current_width), row) = DatumAt(row, col);
 
         // } catch (std::exception& e) {
@@ -258,7 +258,7 @@ void PNG::FlipRightDiagonal() {
         //could use a try block here instead of having expensive checks all of the time
         // try {
         std::cout << current_width << " " << current_row << " " << row << " " << col << std::endl;
-        SetDatumAt(current_width, current_row, GetDatumAt(image, row, col));
+        SetDatumAt(col, row, GetDatumAt(image, row, col));
         // GetDatumAt(output, (current_width), row) = DatumAt(row, col);
 
         // } catch (std::exception& e) {
