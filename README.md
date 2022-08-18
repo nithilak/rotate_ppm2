@@ -1,4 +1,7 @@
 # rotate_ppm2
+Flips an image with the .ppm format in all rotations, flips, and additionally it flips on both diagonals too.
+Note: the maximum color range specified is 0-255 inclusive on both ends.
+
 How to use:
 Create a PNG object in driver.cc, and use as you wish. It can be then flipped and rotated, and there are also some helper funtions but they are mostly irrelevant for your purposes, unless you want to set/get a specific spot of color. The color class can also be useful too, if you want to test out new colors and put them in a specific spot.
 
