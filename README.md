@@ -3,6 +3,7 @@ How to use:
 Create a PNG object in driver.cc, and use as you wish. It can be then flipped and rotated, and there are also some helper funtions but they are mostly irrelevant for your purposes, unless you want to set/get a specific spot of color. The color class can also be useful too, if you want to test out new colors and put them in a specific spot.
 
 Excecute: make exec
+
 then: bin/exec
 
 to see the final results.
